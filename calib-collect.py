@@ -16,6 +16,7 @@ def main(argv):
     data = np.vstack(samples)
     mean = data.mean(0)
     sdev = data.std(0)
+    print("# mean(3) sdev(3) sdev(3)/sqrt(N)")
     print(str(mean)[1:-1], str(sdev)[1:-1], str(sdev/np.sqrt(len(samples)))[1:-1])
 
 if __name__=='__main__':
