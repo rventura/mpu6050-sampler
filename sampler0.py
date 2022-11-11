@@ -22,7 +22,7 @@ def main(argv):
     print(f"# time\taccel(3)\tnorm\tn_samples")
     while True:
         t = time.time()
-        m = data2array(sensor.get_accel_data(g=True)))
+        m = data2array(sensor.get_accel_data(g=True))
         c = m if calib is None else np.dot(Ai, (m-b))
         print(f"{t}\t{str(c)[1:-1]}\t{np.linalg.norm(c)}\t{t-t0}")
         t0 = t
