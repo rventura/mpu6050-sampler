@@ -6,6 +6,9 @@ import scipy.optimize as opt
 import pickle
 
 def main(argv):
+    if len(argv)<2:
+        print(f"Usage: {argv[0]} <dataset> [<output calibration file>]")
+        return
     data = np.loadtxt(argv[1])
     print("Loaded", data.shape, "dataset")
     z = data[:, 0:3].T
