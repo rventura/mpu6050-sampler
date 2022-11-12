@@ -1,3 +1,3 @@
 #!/bin/bash
-rsync -avun dropi-wifi:mpu6050-sampler/data .
+rsync -avu dropi-wifi:mpu6050-sampler/data .
 # EOF
