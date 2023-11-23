@@ -14,9 +14,10 @@ def main(argv):
     a  = data[:,4]
     if len(argv)>2:
         nw = int(argv[2])
-        w  = np.ones(nw)
+        w  = np.ones(nw)/nw
         a = sp.signal.convolve(a, w, mode='same')
     plt.plot(data[:,0]-t0, a)
+    plt.grid(True)
     plt.show()
 
 if __name__=='__main__':
